@@ -11,7 +11,7 @@ options = [
     "--clean",
     "--windowed",
     "--onefile",
-    "-i=hagia_data/celeste.png"
+    #"-i=hagia_data/celeste.png"
 ]
 
 PyInstaller.__main__.run(options)
