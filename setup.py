@@ -12,11 +12,9 @@ assert sys.platform == "win32", sys.exit(
                                 )
 
 assert (
-    sys.version
-        .split(" ")[0]
-        .split(".")[0]==3 and sys.version
-                                .split(" ")[0]
-                                .split(".")[1] >= 7
+    sys.version_info.major == 3 and
+    sys.version_info
+        .minor >= 7
 ),sys.exit(
 """
 Must be on a Python of version 3.7 or newer.
