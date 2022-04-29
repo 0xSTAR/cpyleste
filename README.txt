@@ -8,7 +8,7 @@ A Defective Celeste Classic & PICO-8 Port to Python 3
     Note: If Numba is giving you problems, remove the decorators and
     numba imports from all areas of the source code
 
-- Requires Python 3.8 or newer
+- Requires Python 3.7 or newer
 
 Some other notes about the port:
   When dying for the first time, you will experience an abrupt
