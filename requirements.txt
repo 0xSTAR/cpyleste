@@ -3,3 +3,4 @@ numba==0.55.1
 numpy==1.21.6
 pygame==2.1.2
 pyinstaller==4.9
+cx-Freeze==6.10

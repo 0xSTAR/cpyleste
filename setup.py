@@ -1,4 +1,5 @@
 import sys
+from cx_Freeze import setup, Executable
 
 assert sys.platform == "win32", sys.exit(
                                 """
@@ -21,27 +22,6 @@ Must be on a Python of version 3.7 or newer.
 You are on Python version {} ...
 """.format(sys.version.split(" ")[0])
 )
-
-try:
-    from cx_Freeze import setup, Executable
-except ModuleNotFoundError:
-    import subprocess
-    subprocess.check_call(
-        [
-            sys.executable,
-            "-m",
-            "pip",
-            "install",
-            "-U",
-            "cx-Freeze"
-        ]
-    )
-
-    # re-import
-    try:
-        from cx_Freeze import setup,Executable
-    except ImportError:
-        sys.exit("Re-run the build script.")
 
 build_exe_opts = {
     "packages":[
