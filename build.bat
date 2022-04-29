@@ -1,1 +1,1 @@
-py setup.py build_exe -O2
+python setup.py build_exe -O2

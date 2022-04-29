@@ -152,6 +152,35 @@ def title_screen():
     global start_game
     global start_game_flash
 
+    def RESET_GLOBALS():
+        global room, objects, types, freeze, shake
+        global will_restart, delay_restart, got_fruit
+        global has_dashed, sfx_timer, has_key, pause_player
+        global flash_bg, music_timer, new_bg, seconds, frames, minutes
+        #room:Vec2i = Vec2i(0,0)
+        room = Vec2i(0,0)
+        objects = []
+        #types = []
+        freeze = 0
+        shake = 0
+        will_restart = False
+        delay_restart = 0
+        got_fruit = []
+        has_dashed = False
+        sfx_timer = 0
+        has_key = False
+        pause_player = False
+        flash_bg= False
+        music_timer = 0
+
+        new_bg = None
+
+        seconds = 0
+        frames = 0
+        minutes = 0
+
+    RESET_GLOBALS()
+
     got_fruit = []
     for i in range(32):
         add(got_fruit,False)
@@ -1606,4 +1635,4 @@ class Celeste(hagia.Cart):
     def map(self) -> str:
         return "map.data"
 
-h.load_cart(Celeste())
+h.load_cart(Celeste)
